@@ -1,0 +1,26 @@
+az cloud set -n AzureChinaCloud
+
+az login
+
+az account set --subscription Demo
+
+az storage account keys list --resource-group demo-rg --account-name leizhangstorage001
+
+az storage container create --account-name leizhangstorage001 --name 20201110
+
+
+az storage blob upload \
+    --account-name leizhangstorage001 \
+    --container-name 20201110 \
+    --name file1.txt \
+    --file file1.txt \
+
+
+export AZURE_STORAGE_CONNECTION_STRING=""
+
+
+sas=$(az storage container generate-sas -n 20201110 --permissions acdrw --expiry 2021-10-15T17:00Z)
+
+
+az storage blob upload -n file1.txt -c 20201110 -f file1.txt --sas-token $sas
+
