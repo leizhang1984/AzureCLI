@@ -1,0 +1,61 @@
+#选择PE订阅
+subscriptionName=""
+
+az account set --subscription $subscriptionName
+
+
+#设置资源组，如果是德国Azure请用下面的默认值
+resourcegroup_name="defaultrg"
+
+#设置安全组名称
+nsg_name="NIO_PE_Deny_Prod"
+
+#创建新的规则名称
+newrule_name="newrule01"
+
+#优先级，必须是数字，最小100，最大4096.
+priority=4000
+
+#源IP CIDR
+sourceaddress_prefixes="208.130.28.0/24"
+
+#源端口
+source_port="[80,8080]"
+
+#目标IP
+destinationaddress_prefixes="*"
+
+#目标端口
+destination_port="[80,8080]"
+
+#允许或者拒绝,Allow, Deny
+access="Allow"
+
+#协议*, Icmp, Tcp, Udp
+nsgprotocol="*"
+
+#描述
+descriptioninfo="test"
+
+#创建新的安全组
+az network nsg rule create --resource-group $resourcegroup_name --nsg-name $nsg_name \
+ -n $newrule_name --priority $priority \
+ --source-address-prefixes $sourceaddress_prefixes --source-port-ranges $source_port \
+--destination-address-prefixes  "$destinationaddress_prefixes" --destination-port-ranges $destination_port \
+--access $access --protocol "$nsgprotocol" --description $descriptioninfo --no-wait
+
+
+#设置资源组，如果是德国Azure请用下面的默认值
+resourcegroup_name="defaultrg"
+
+#设置安全组名称
+nsg_name="NIO_PE_Deny_Prod"
+
+#需要删除的安全组名称
+newrule_name="newrule01"
+
+az network nsg rule delete -g $resourcegroup_name --nsg-name $nsg_name -n $newrule_name --no-wait
+
+
+
+
