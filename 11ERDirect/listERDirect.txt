@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# 获取所有的ExpressRoute端口位置
+locations=$(az network express-route port location list --query '[].name' -o tsv)
+
+# 循环遍历每个位置
+for location in $locations; do
+    echo "Location: $location"
+
+    # 获取该位置的详细信息
+    details=$(az network express-route port location show -l $location)
+
+    # 提取支持的线路带宽
+    bandwidths=$(echo $details | jq -r '.availableBandwidths[]')
+
+    echo "Supported Bandwidths:"
+    for bandwidth in $bandwidths; do
+        echo "  - $bandwidth"
+    done
+
+    echo ""
+done

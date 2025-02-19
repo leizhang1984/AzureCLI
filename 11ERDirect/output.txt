@@ -1,0 +1,1383 @@
+Location: Airtel-Chennai-CLS
+Supported Bandwidths:
+
+Location: Airtel-Chennai2-CLS
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Allied-Toronto-King-West
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Amsterdam-Metro-Direct
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Area51-ERDirect
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: Ascenty-Campinas-Campinas1
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Atlanta-Metro-Direct
+Supported Bandwidths:
+
+Location: AtTokyo-Tokyo-CC1
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: Bezeq-Tel-Aviv-SIVIM
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: Bharti-Airtel-Mumbai2
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: Bulk-Data-OSLO-IX
+Supported Bandwidths:
+
+Location: CDC-Canberra
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: CDC-Canberra-CBR20
+ERROR: (RetryableError) A retryable error occurred.
+Code: RetryableError
+Message: A retryable error occurred.
+Exception Details:      (GatewayError) Error occurred in resource provider infrastructure services.
+        Code: GatewayError
+        Message: Error occurred in resource provider infrastructure services.
+Inner error: "Source: RD84B1E2141B49. Microsoft.WindowsAzure.Networking.Nrp.Frontend.Common.NrpException: A retryable error occurred. ---> Microsoft.WindowsAzure.Networking.Nrp.Frontend.Common.NrpException: Error occurred in resource provider infrastructure services. ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.\r\n   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at Microsoft.WindowsAzure.Networking.Nrp.Common.ReliableHttpClient.HttpClientWrapper.<SendAsync>d__7.MoveNext() in X:\\bt\\1277247\\repo\\src\\sources\\Common\\ReliableHttpClient\\HttpClientWrapper.cs:line 105\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)\r\n   at Microsoft.WindowsAzure.Networking.Nrp.GatewayServiceCommon.GatewayServiceRoutingController.<CallNrpAndGetResponseWithRetries>d__46.MoveNext() in X:\\bt\\1277247\\repo\\src\\sources\\GatewayService\\GatewayCommon\\GatewayServiceRoutingController.cs:line 924\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at Microsoft.WindowsAzure.Networking.Nrp.GatewayServiceCommon.GatewayServiceRoutingController.<CallNrpAndGetResponseWithRetries>d__46.MoveNext() in X:\\bt\\1277247\\repo\\src\\sources\\GatewayService\\GatewayCommon\\GatewayServiceRoutingController.cs:line 967\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at Microsoft.WindowsAzure.Networking.Nrp.GatewayServiceCommon.GatewayServiceRoutingController.<ForwardMessageToNrpAndProcessResponseAsync>d__37.MoveNext() in X:\\bt\\1277247\\repo\\src\\sources\\GatewayService\\GatewayCommon\\GatewayServiceRoutingController.cs:line 370   --- End of inner exception stack trace ---\r\n   --- End of inner exception stack trace ---\r\n"
+Supported Bandwidths:
+
+Location: CDC-Canberra2
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: Chennai-MAA01
+Supported Bandwidths:
+
+Location: Cheyenne-ERDirect
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Chicago-Metro-Direct
+Supported Bandwidths:
+
+Location: ChiefTelecom-Taipei
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: ChunghwaTelecom-Taipei
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: Cologix-Minneapolis-MIN3
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Cologix-Montreal-MTL3
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Cologix-Montreal-MTL7
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Cologix-Toronto-TOR1
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: CoreSite-Chicago-CH1
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Coresite-Denver-DE1
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: CoreSite-Los-Angeles-LA1
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: CoreSite-Los-Angeles-LA3
+Supported Bandwidths:
+
+Location: CoreSite-Reston-VA2
+Supported Bandwidths:
+
+Location: CoreSite-Reston-VA3
+Supported Bandwidths:
+
+Location: CoreSite-Santa-Clara-SV7
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: CyrusOne-San-Antonio-1
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Dallas-Metro-Direct
+Supported Bandwidths:
+
+Location: Data4Italy-Milan
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: DigiPlex-Oslo-Ulven
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: DRT-Atlanta2-ATL14
+Supported Bandwidths:
+
+Location: DRT-Brussels-BRU4
+Supported Bandwidths:
+
+Location: DRT-Chicago-CHI31
+Supported Bandwidths:
+
+Location: DRT-Dallas2-DFW10
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: DRT-Vienna-VIE1
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: Du-Datamena-Dubai-DX1
+Supported Bandwidths:
+
+Location: Dublin-Metro-Direct
+Supported Bandwidths:
+
+Location: EdgeConnex-Phoenix-PHX01
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: EdgeConneX-Portland-POR01
+Supported Bandwidths:
+
+Location: EdgeConneX-Santiago-SPA
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Equinix-Amsterdam-AM5
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Equinix-Ashburn-DC2
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Equinix-Ashburn-DC6
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Equinix-Atlanta-AT1
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Equinix-Atlanta-AT2
+Supported Bandwidths:
+
+Location: Equinix-Bogota-BG1
+Supported Bandwidths:
+
+Location: Equinix-Chicago-CH1
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Equinix-Dallas-DA3
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Equinix-Dallas-DA6
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: Equinix-Dublin-DB3
+Supported Bandwidths:
+
+Location: Equinix-Frankfurt-FR7
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Equinix-Geneva-GV2
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Equinix-Hong-Kong-HK1
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Equinix-Hong-Kong-HK2
+Supported Bandwidths:
+
+Location: Equinix-London-LD5
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Equinix-Los-Angeles-LA1
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Equinix-Madrid-MD2
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: Equinix-Miami-MI1
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: Equinix-New-York-NY5
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Equinix-New-York-NY9
+Supported Bandwidths:
+
+Location: Equinix-Osaka-OS1
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: Equinix-Paris-PA4
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Equinix-Rio-de-Janeiro-RJ2
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Equinix-San-Jose-SV1
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Equinix-San-Jose-SV10
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Equinix-Sao-Paulo-SP2
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: Equinix-Seattle-SE2
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Equinix-Singapore-SG1
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Equinix-Stockholm-SK1
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Equinix-Sydney-SY2
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: Equinix-Tokyo-TY4
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: Equinix-Warsaw-WA1
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: Equinix-Zurich-ZH5
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Etisalat-Abu-Dhabi-KDC
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Etisalat-Dubai-DXB20
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Global-Switch-Singapore
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: GreenMountain-Stavanger
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Hillside-Tel-Aviv-SDS
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: iAdvantage-Hong-Kong2-MEGA-i
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: Interxion-Amsterdam2-AMS8
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Interxion-Copenhagen
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: Interxion-Dublin-DUB2
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Interxion-Frankfurt-FRA11
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: Interxion-Madrid-MAD1
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Interxion-Marseille-MRS3
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: Interxion-Paris-PAR5
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Interxion-Zurich-ZUR2
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: IRIDEOS-Milan
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: KINX-Seoul-Gasan
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: KIO-Networks-Queretaro-QR01
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: KT-Seoul-Mokdong2
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: LCL-Brussels-Diegem
+Supported Bandwidths:
+
+Location: Madrid-Metro-Direct
+Supported Bandwidths:
+
+Location: Meeza-Doha-MV2
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: Milan-Metro-Direct
+Supported Bandwidths:
+
+Location: NEC-Tokyo
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: NextDC-Melbourne-MEL01
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: NextDC-Perth-PER1
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: NextDC-Sydney-S1
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: NTT-GDC-Berlin-1
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: NTT-GDC-Vienna
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: Ooredoo-Doha-QDC5
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: PhoenixNAP-Phoenix2
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: PortalTestLocation
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: Sabey-Data-Centers-Quincy-A
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: Singapore-Metro-Direct
+Supported Bandwidths:
+
+Location: STTGDC-Pune-PNQDC1
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: Switch-Las-Vegas
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Tata-Chennai-VSB
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: Tata-Mumbai-LVSB
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Telehouse-London2
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Telin-Jakarta-CDCI
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Teraco-Cape-Town-CT1
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Teraco-Johannesburg-JT1
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Tivit-Sao-Paulo-TSM
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: Vantage-Quebec-City-QC21
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: VantageDC-Newport-NGD
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+
+Location: Vocus-Auckland-VDCAKL01
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
+  - {
+  - "offerName":
+  - "100
+  - Gbps",
+  - "valueInGbps":
+  - 100
+  - }
+
+Location: Zurich-Metro-Direct
+Supported Bandwidths:
+  - {
+  - "offerName":
+  - "10
+  - Gbps",
+  - "valueInGbps":
+  - 10
+  - }
