@@ -28,3 +28,6 @@ az network lb address-pool address update  \
     --pool-name $backend_pool_name \
     --name $backend_name \
     --ip-address $new_ip
+
+
+echo "执行成功"
