@@ -1,4 +1,6 @@
-az cloud set -n AzureChinaCloud
+#az cloud set -n AzureChinaCloud
+az cloud set -n AzureCloud
+
 az login
 
 subscriptionName='Demo'
