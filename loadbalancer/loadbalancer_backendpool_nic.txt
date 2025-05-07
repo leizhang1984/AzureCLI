@@ -1,0 +1,62 @@
+###########################在负载均衡器的后端,更新网卡信息################
+###请注意，如果负载均衡器指向的是网卡，则需要在虚拟机的网卡上，关联负载均衡器
+
+#资源组名称
+rgname="gatewaylb-rg"
+#负载均衡器ip
+lb_name="public-nginx-lb"
+#后端池名称
+backend_pool_name="pool01"
+#老的网卡ip
+old_ip="10.200.0.4"
+#新的网卡ip
+new_ip="10.200.0.5"
+
+#获得老的网卡ip configuration信息
+old_nic_ipconfig_id=$(az network nic list --query "[?ipConfigurations[0].privateIPAddress=='$old_ip'].ipConfigurations[0].id" -o tsv)
+#echo $old_nic_ipconfig_id
+
+old_nic_ipconfig_name=$(az network nic list --query "[?ipConfigurations[0].privateIPAddress=='$old_ip'].ipConfigurations[0].name" -o tsv)
+#echo $old_nic_ipconfig_name
+
+old_nic_ipconfig_nicname=$(az network nic list --query "[?ipConfigurations[0].privateIPAddress=='$old_ip'].name" -o tsv)
+#echo $old_nic_ipconfig_nicname
+
+#显示负载均衡器后端池的信息
+backend_name=$(az network lb address-pool address list  \
+    --resource-group $rgname \
+    --lb-name $lb_name \
+    --pool-name $backend_pool_name \
+    --query "[].name" -o tsv)
+
+
+#把老的虚拟机网卡，取消与负载均衡器的关联
+az network nic ip-config address-pool remove --resource-group $rgname \
+    --lb-name $lb_name \
+    --address-pool $backend_pool_name \
+    --ip-config-name $old_nic_ipconfig_name \
+    --nic-name $old_nic_ipconfig_nicname 
+                                             
+
+###################################
+###################################
+###################################
+
+#获得新的网卡ip configuration信息
+new_nic_ipconfig_id=$(az network nic list --query "[?ipConfigurations[0].privateIPAddress=='$new_ip'].ipConfigurations[0].id" -o tsv)
+#echo $old_nic_ipconfig_id
+
+new_nic_ipconfig_name=$(az network nic list --query "[?ipConfigurations[0].privateIPAddress=='$new_ip'].ipConfigurations[0].name" -o tsv)
+#echo $old_nic_ipconfig_name
+
+new_nic_ipconfig_nicname=$(az network nic list --query "[?ipConfigurations[0].privateIPAddress=='$new_ip'].name" -o tsv)
+
+
+#把新增加的虚拟机网卡，增加与负载均衡器的关联
+az network nic ip-config address-pool add --resource-group $rgname \
+    --lb-name $lb_name \
+    --address-pool $backend_pool_name \
+    --ip-config-name $new_nic_ipconfig_name \
+    --nic-name $new_nic_ipconfig_nicname 
+
+echo "执行成功"

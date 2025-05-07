@@ -1,0 +1,30 @@
+###########################在负载均衡器的后端，更新IP################
+
+
+#资源组名称
+rgname="gatewaylb-rg"
+#负载均衡器ip
+lb_name="public-nginx-lb"
+#后端池名称
+backend_pool_name="pool02"
+#老的ip
+old_ip="10.0.0.4"
+#新的ip
+new_ip="10.0.0.5"
+
+#显示负载均衡器后端池的信息
+#默认会显示10.0.0.4
+#需要获得name这个信息
+backend_name=$(az network lb address-pool address list  \
+    --resource-group $rgname \
+    --lb-name $lb_name \
+    --pool-name $backend_pool_name \
+    --query "[].name" -o tsv)
+
+#根据name，把ip修改为新的ip
+az network lb address-pool address update  \
+    --resource-group $rgname \
+    --lb-name $lb_name \
+    --pool-name $backend_pool_name \
+    --name $backend_name \
+    --ip-address $new_ip

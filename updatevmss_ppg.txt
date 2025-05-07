@@ -1,0 +1,20 @@
+az account set --subscription '166157a8-9ce9-400b-91c7-1d42482b83d6'
+
+#资源组名称
+rgname="jt-rg"
+vmss_name="jtvmss-germanywest-zone1-vmss"
+
+#设置vmss的ppg为空
+az vmss update --resource-group $rgname --name $vmss_name --ppg ""
+
+
+
+#设置vmss里的虚拟机的ppg为空
+#设置第1台
+vmname="jtvmss-germanywest-zone1-vmss_04d312ad"
+az vm update --resource-group $rgname --name $vmname --ppg ""
+
+
+#设置第2台
+vmname="jtvmss-germanywest-zone1-vmss_6f724e63"
+az vm update --resource-group $rgname --name $vmname --ppg ""
