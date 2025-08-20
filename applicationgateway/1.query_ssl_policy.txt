@@ -6,31 +6,49 @@ subscriptions=$(az account list --query "[].id" -o tsv)
 # 遍历每个订阅
 for subscription in $subscriptions; do
   echo "Processing subscription: $subscription"
-
+  
   # 切换到当前订阅
   az account set --subscription "$subscription"
-
+  
   # 获取当前订阅中的所有 Application Gateway
   appGateways=$(az network application-gateway list --query "[].{name:name, resourceGroup:resourceGroup}" -o tsv)
-
+  
   # 遍历每个 Application Gateway
   while read -r name resourceGroup; do
     echo "  Application Gateway: $name (Resource Group: $resourceGroup)"
-
-    # 获取当前 Application Gateway 的 SSL 策略
-    defaultPredefinedSslPolicy=$(az network application-gateway show --resource-group "$resourceGroup" --name "$name" --query "sslPolicy.policyName" -o tsv)
-    # defaultPredefinedSslPolicy=$(az network application-gateway show --resource-group "$resourceGroup" --name "$name" --query "defaultPredefinedSslPolicy" -o tsv)
-
-    if [ -z "$defaultPredefinedSslPolicy" ] || [ "$defaultPredefinedSslPolicy" == "null" ]; then
-      echo "    No defaultPredefinedSslPolicy set for this Application Gateway."
+    
+    # 获取当前 Application Gateway 的 SSL 策略名称
+    policyName=$(az network application-gateway show --resource-group "$resourceGroup" --name "$name" --query "sslPolicy.policyName" -o tsv)
+    
+    if [ -z "$policyName" ] || [ "$policyName" == "null" ]; then
+      echo "    No sslPolicy.policyName set for this Application Gateway. Checking defaultPredefinedSslPolicy..."
+      
+      # 获取当前 Application Gateway 的默认预定义的 SSL 策略
+      defaultPredefinedSslPolicy=$(az network application-gateway show --resource-group "$resourceGroup" --name "$name" --query "defaultPredefinedSslPolicy" -o tsv)
+      
+      if [ -z "$defaultPredefinedSslPolicy" ] || [ "$defaultPredefinedSslPolicy" == "null" ]; then
+        echo "    No defaultPredefinedSslPolicy set for this Application Gateway."
+      else
+        echo "    defaultPredefinedSslPolicy: $defaultPredefinedSslPolicy"
+        
+        # 获取详细的 SSL 策略信息
+        sslPolicyDetails=$(az network application-gateway ssl-policy predefined show --name "$defaultPredefinedSslPolicy" -o json)
+        minProtocolVersion=$(echo "$sslPolicyDetails" | jq -r '.minProtocolVersion')
+        
+        echo "    Min Protocol Version: $minProtocolVersion"
+      fi
     else
-      echo "    defaultPredefinedSslPolicy: $defaultPredefinedSslPolicy"
-
+      echo "    sslPolicy.policyName: $policyName"
+      
       # 获取详细的 SSL 策略信息
-      sslPolicyDetails=$(az network application-gateway ssl-policy predefined show --name "$defaultPredefinedSslPolicy" -o json)
+      sslPolicyDetails=$(az network application-gateway ssl-policy predefined show --name "$policyName" -o json)
       minProtocolVersion=$(echo "$sslPolicyDetails" | jq -r '.minProtocolVersion')
-
-      echo "    Min Protocol Version: $minProtocolVersion"
+      
+      if [ -z "$minProtocolVersion" ] || [ "$minProtocolVersion" == "null" ]; then
+        echo "    No minProtocolVersion set in sslPolicy."
+      else
+        echo "    Min Protocol Version: $minProtocolVersion"
+      fi
     fi
   done <<< "$appGateways"
 done
