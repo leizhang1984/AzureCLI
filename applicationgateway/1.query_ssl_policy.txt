@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# 获取所有订阅
+subscriptions=$(az account list --query "[].id" -o tsv)
+
+# 遍历每个订阅
+for subscription in $subscriptions; do
+  echo "Processing subscription: $subscription"
+
+  # 切换到当前订阅
+  az account set --subscription "$subscription"
+
+  # 获取当前订阅中的所有 Application Gateway
+  appGateways=$(az network application-gateway list --query "[].{name:name, resourceGroup:resourceGroup}" -o tsv)
+
+  # 遍历每个 Application Gateway
+  while read -r name resourceGroup; do
+    echo "  Application Gateway: $name (Resource Group: $resourceGroup)"
+
+    # 获取当前 Application Gateway 的 SSL 策略
+    defaultPredefinedSslPolicy=$(az network application-gateway show --resource-group "$resourceGroup" --name "$name" --query "sslPolicy.policyName" -o tsv)
+
+    if [ -z "$defaultPredefinedSslPolicy" ] || [ "$defaultPredefinedSslPolicy" == "null" ]; then
+      echo "    No defaultPredefinedSslPolicy set for this Application Gateway."
+    else
+      echo "    defaultPredefinedSslPolicy: $defaultPredefinedSslPolicy"
+
+      # 获取详细的 SSL 策略信息
+      sslPolicyDetails=$(az network application-gateway ssl-policy predefined show --name "$defaultPredefinedSslPolicy" -o json)
+      minProtocolVersion=$(echo "$sslPolicyDetails" | jq -r '.minProtocolVersion')
+
+      echo "    Min Protocol Version: $minProtocolVersion"
+    fi
+  done <<< "$appGateways"
+done
