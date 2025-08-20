@@ -19,6 +19,7 @@ for subscription in $subscriptions; do
 
     # 获取当前 Application Gateway 的 SSL 策略
     defaultPredefinedSslPolicy=$(az network application-gateway show --resource-group "$resourceGroup" --name "$name" --query "sslPolicy.policyName" -o tsv)
+    # defaultPredefinedSslPolicy=$(az network application-gateway show --resource-group "$resourceGroup" --name "$name" --query "defaultPredefinedSslPolicy" -o tsv)
 
     if [ -z "$defaultPredefinedSslPolicy" ] || [ "$defaultPredefinedSslPolicy" == "null" ]; then
       echo "    No defaultPredefinedSslPolicy set for this Application Gateway."
